@@ -1,15 +1,15 @@
 $schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
 code: model
 command: >-
-  python 
+  python train.py
   --
   --
 inputs:
   training_data: 
     type: uri_folder 
-    path: 
+    path: https://testmlops2753994478.blob.core.windows.net/azureml-blobstore-aeb02ada-80c7-43c2-9280-7ca46b026742/UI/2024-12-09_061902_UTC/data/
   reg_rate: 0.01
 environment: azureml:AzureML-sklearn-0.24-ubuntu18.04-py37-cpu@latest
-compute: 
-experiment_name: 
-description: 
+compute: test-mlops
+experiment_name: xq-experiment
+description: test mlops job
